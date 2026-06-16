@@ -1,0 +1,11 @@
+/* 16px = 1em = 1rem = 100% */
+
+/* em derives its values from parent element */
+/* rem derives its values from root element(<html>) */
+
+#wrapper {
+  font-size: 200px;
+}
+#wrapper p {
+  font-size: 3rem;
+}
