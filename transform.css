@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* translate, scale, skew, rotate 2D transforms */
+/* translateX, scaleY, skewX, rotateY 3D transforms */
+#box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  /* transform: translate(100px, 5rem); */
+
+  /* transform: rotate(); */
+
+  /* transform: scale(); */
+  transform: skew();
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
