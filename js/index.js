@@ -364,7 +364,90 @@
 // let b = arr.splice(1, 1, 14); //[2] [1,14,3,10,11,12,5]
 // console.log(a[0] + b[0] + arr[arr.length - 1]);
 
-
 //OBJECTS,
 //CALLBACKS
 //HOF
+
+// const p = ["Shipra", "Jaipur", 1234567890, 123412341234];
+
+// const person = {
+//   name: "Shipra",
+//   hometown: "Jaipur",
+//   phone: 1234512345,
+//   aadhaar: 123412341234,
+//   pan: "agh1234r43",
+//   isMarried: false,
+//   hobbies: ["sleeping", "eating", "singing"],
+// };
+
+//DOT NOTATION
+// console.log(person.name);
+
+//ARRAY NOTATION
+// console.log(person["name"]);
+
+// const x = "name";
+
+// console.log(person[x]);
+
+// console.log(p);
+// console.log(person);
+
+// document.writeln(p);
+// document.writeln(person);
+
+//ALl pairs from objects can be printed on screen using for..in loop
+
+// for (let i in person) {
+//   document.writeln(i + ":" + person[i] + "<br>");
+// }
+
+//Object.keys(), Object.values(), Object.entries() //return array
+
+// console.log(Object.keys(person));
+// console.log(Object.values(person));
+// console.log(Object.entries(person));
+
+// let entries = Object.entries(person);
+// let reversed = entries.reverse();
+
+// console.log(reversed);
+
+// for (let i = 0; i < reversed.length; i++) {
+//   document.write(reversed[i][0] + ":" + reversed[i][1] + "<br>");
+// }
+
+// const person = {
+//   name: "Virat Kohli",
+//   country: "England",
+// };
+
+// person["profession"] = "Cricketer";
+// person["country"] = "India";
+
+// console.log(Object.keys(person).length); //3
+// console.log(person["country"].length); //5
+
+// ASSIGNMENT:
+// Object.assign, Object.seal, Object.freeze, shallow copy, deep copy
+
+//Spread
+
+// const p1 = ["Ram", "Shyam"];
+// const p2 = [...p1];
+
+// const o1 = { name: "Rohit" };
+// const o2 = { email: "rohit@fullstacklearning.com", name: "Jatin" };
+// const o3 = { ...o1, ...o2 };
+// console.log(Object.keys(o3).length);
+
+// const arr1 = [2, 4, 6];
+// const arr2 = arr1.splice(1, 2, 7, 8, 10);
+// const arr3 = [...arr1, arr2];
+// let a = ++arr3[0]; //3
+// let b = arr3.shift(); //3
+// let c = arr3.pop(); //[4,6]
+// let d = arr3.pop(); //10
+// console.log(a + b + d);
+
+// console.log(arr3[0] + arr3[1] + arr3[arr3.length - 1] - arr3.length);
