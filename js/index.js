@@ -451,3 +451,198 @@
 // console.log(a + b + d);
 
 // console.log(arr3[0] + arr3[1] + arr3[arr3.length - 1] - arr3.length);
+
+// const person = {
+//   name: "Shipra",
+//   email: "shipra@gmail.com",
+// };
+// // person.name = "Piyush";
+// // person.age = 26;
+// Object.freeze(person);
+// person.name = "Harsh";
+// person.age = 20;
+// console.log(person.name.length);
+// console.log(person.age > 25);
+
+// const person = {
+//   name: "Piyush",
+// };
+
+// const p2 = person; //shallow copy
+// p2.name = "Shipra";
+// console.log(person.name);
+
+// const p2 = structuredClone(person); //DEEP COPY
+// p2.name = "Harsh";
+
+// console.log(person.name);
+
+// const p2 = { ...person }; //DEEP COPY
+
+// p2.name = "Vartika";
+// console.log(person.name);
+
+// const person = {
+//   name: "Piyush",
+//   email: "piyush@gmail.com",
+//   address: {
+//     city: "Tonk",
+//     state: "Rajasthan",
+//   },
+// };
+
+// const p2 = { ...person };
+
+// p2.name = "Jatin";
+// p2.address.city = "Jaipur";
+
+// console.log(person.name); //Jatin //Piyush Jatin
+// console.log(person.address.city); //Jaipur //Tonk Jaipur
+
+// const p1 = { name: "Harsh", age: 21 };
+// const p2 = { name: "Piyush", age: 19 };
+
+// const p3 = { p1, ...p2 };
+// console.log(p3);
+// console.log(Object.keys(p3).length);
+
+// function f1(n1, n2, callback) {
+//   if (n1.length < n2.length) return callback(10, 20);
+//   else return callback(10, 20, "*");
+// }
+// function f2(a, b, operation = null) {
+//   if (!operation) {
+//     return a + b;
+//   } else {
+//     switch (operation) {
+//       case "*":
+//         return a * b;
+//         break;
+//       case "/":
+//         return a / b;
+//     }
+//   }
+// }
+
+// console.log(f1("Ramesh", "Shyam", f2));
+
+//Higher Order Functions:
+//  - works on an array
+//  - takes a function as the first argument
+//  - might returns an array
+
+// map, filter, reduce, foreach, some, every, find, findIndex
+
+// const numbers = [2, 4, 6, 8, 10, 12, 14];
+// let total = 0;
+
+// // numbers.forEach(sum);
+// numbers.map(sum);
+
+// function sum(n) {
+//   if (n > 8) total += n;
+// }
+
+// console.log(total);
+
+// numbers.map(sum);
+// function sum(n){
+
+// }
+
+// numbers.map(sum);
+
+//Anonymous function: HAVE TO BE INVOKED ON THE SPOT
+// function () {
+//     console.log("Anonymous function")
+// }
+
+// numbers.map(function (n) {
+//   result += n;
+// });
+
+const numbers = [5, 1, 12, 4, 2, 16, 14, 13];
+
+//Return an array with squares of each number
+
+// const squares = numbers.map(function (n) {
+//   return n * n;
+// });
+
+// const squares = numbers.map((n) => {
+//   return n * n;
+// });
+
+// console.log(squares);
+
+//ASSIGNMENT: difference between an arrow and a anonymous function
+
+// const squaresEven = numbers.filter((n) => {
+//   return n % 2 === 0;
+// });
+// const result = squaresEven.map((n) => {
+//   return n * n;
+// });
+
+// const result = numbers
+//   .filter((n) => {
+//     return n % 2 === 0;
+//   })
+//   .map((n) => {
+//     return n * n;
+//   });
+
+// console.log(result);
+
+// const num = [1, 3, 12, 2, 9, 19];
+
+//Sum of all numbers
+
+// const sum = num.reduce((accumulator, current) => {
+//   return accumulator + current;
+// });
+
+// const sum = num.reduce((accumulator, current) => {
+//   return accumulator + current;
+// }, 100);
+
+// console.log(sum);
+
+
+
+
+// const arr = [1, 2, 3, 4, 5];
+// const result = arr.reduce((acc, cur) => acc + cur, 0) - arr.filter(x => x % 2 === 0).length;
+// console.log(result);
+
+
+// const arr = [1, 2, 3, 4, 5];
+// const result = arr.map(x => x * 2).filter(x => x > 5).reduce((acc, cur) => acc + cur, 0);
+// console.log(result);
+
+// const arr = [1, 2, 3, 4, 5];
+// const result = arr.slice(1, 4).map(x => x * 2).reduce((acc, cur) => acc + cur, 0);
+// console.log(result);
+
+
+// let str = "The quick brown fox jumps over the lazy dog";
+// let result = str.replace(/o/g, "0").split(" ").slice(4, 7).join("-");
+// console.log(result);
+
+
+// let text = "JavaScript is awesome. JavaScript is fun.";
+// let result = text.replaceAll("JavaScript", "JS").indexOf("awesome") - text.lastIndexOf("is");
+// console.log(result);
+
+
+// let phrase = "Hello, World!";
+// let result = phrase.slice(-6, -1).split("").reverse().join("+");
+// console.log(result);
+
+
+// let str = "abcdefghijklmnopqrstuvwxyz";
+// let result = str.slice(str.indexOf('m'), str.indexOf('t')).split('').filter((h, i) => i % 2 === 0).join('');
+// console.log(result);
+
+
+
