@@ -561,7 +561,7 @@
 //   result += n;
 // });
 
-const numbers = [5, 1, 12, 4, 2, 16, 14, 13];
+// const numbers = [5, 1, 12, 4, 2, 16, 14, 13];
 
 //Return an array with squares of each number
 
@@ -608,13 +608,9 @@ const numbers = [5, 1, 12, 4, 2, 16, 14, 13];
 
 // console.log(sum);
 
-
-
-
 // const arr = [1, 2, 3, 4, 5];
 // const result = arr.reduce((acc, cur) => acc + cur, 0) - arr.filter(x => x % 2 === 0).length;
 // console.log(result);
-
 
 // const arr = [1, 2, 3, 4, 5];
 // const result = arr.map(x => x * 2).filter(x => x > 5).reduce((acc, cur) => acc + cur, 0);
@@ -624,25 +620,250 @@ const numbers = [5, 1, 12, 4, 2, 16, 14, 13];
 // const result = arr.slice(1, 4).map(x => x * 2).reduce((acc, cur) => acc + cur, 0);
 // console.log(result);
 
-
 // let str = "The quick brown fox jumps over the lazy dog";
 // let result = str.replace(/o/g, "0").split(" ").slice(4, 7).join("-");
 // console.log(result);
-
 
 // let text = "JavaScript is awesome. JavaScript is fun.";
 // let result = text.replaceAll("JavaScript", "JS").indexOf("awesome") - text.lastIndexOf("is");
 // console.log(result);
 
-
 // let phrase = "Hello, World!";
 // let result = phrase.slice(-6, -1).split("").reverse().join("+");
 // console.log(result);
-
 
 // let str = "abcdefghijklmnopqrstuvwxyz";
 // let result = str.slice(str.indexOf('m'), str.indexOf('t')).split('').filter((h, i) => i % 2 === 0).join('');
 // console.log(result);
 
+// let text = "The rain in Spain stays mainly in the plain";
+// let result = text.split(" ").filter(word => word.includes("ain")).map(word => word.replace("ain", "AIN")).join(" ");
+// console.log(result);
+
+// let numbers = [10, 20, 30, 40, 50];
+// numbers.push(60, 70);
+// numbers.shift();
+// numbers.unshift(5, 15);
+// let result = numbers.splice(2, 3).reduce((a, b) => a + b, 0);
+// console.log(result); //90
+// console.log(numbers); // [5,15,50,60,70]
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [4, 5, 6];
+// arr1.push(...arr2);
+// arr1.splice(2, 0, 7, 8);
+// arr1.shift();
+// let result = arr1.pop() + arr1[arr1.length - 1];
+// console.log(result); //11
+// console.log(arr1); //[2,7,8,3,4,5]
+
+// const obj1 = { a: 1, b: 2 };
+// const obj2 = { b: 3, c: 4 };
+// const merged = { ...obj1, ...obj2 };
+// console.log(Object.values(merged).reduce((sum, val) => sum + val, 0));
+
+// const obj = {a: 1, b: 2, c: 3};
+// Object.seal(obj);
+// obj.d = 4;
+// obj.b = 5;
+// delete obj.a;
+// console.log(Object.keys(obj).length); //3
+// console.log(obj.b); //5
+
+// const person = {name: "John", age: 30};
+// Object.freeze(person);
+// person.job = "Developer";
+// person.age = 31;
+// for (let key in person) {
+//     console.log(key + ": " + person[key]);
+// } //name: John, age: 30
 
 
+
+// function mapArray(array, callback) {
+//   const mappedArray = [];
+//   for (let element of array) {
+//     mappedArray.push(callback(element));
+//   }
+//   return mappedArray;
+// }
+
+// function double(num) {
+//   return num * 2;
+// }
+
+// const numbers = [1, 2, 3, 4, 5];
+// console.log(mapArray(numbers, double));
+
+// function filterArray(array, callback) {
+//   const filteredArray = [];
+//   for (let element of array) {
+//     if (callback(element)) {
+//       filteredArray.push(element);
+//     }
+//   }
+//   return filteredArray;
+// }
+
+// function isEven(num) {
+//   return num % 2 === 0;
+// }
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// console.log(filterArray(numbers, isEven));
+
+// function customForEach(array, callback) {
+//   for (let i = 0; i < array.length; i++) {
+//     callback(array[i], i, array);
+//   }
+// }
+
+// const numbers = [10, 20, 30];
+
+// customForEach(numbers, function (value, index, arr) {
+//   arr[index] = value + index;
+// });
+
+// console.log(numbers);
+
+// function reduceArray(array, callback, initialValue) {
+//   let accumulator = initialValue;
+//   for (let element of array) {
+//     accumulator = callback(accumulator, element);
+//   }
+//   return accumulator;
+// }
+
+// function sum(acc, curr) {
+//   return acc + curr;
+// }
+
+// const numbers = [1, 2, 3, 4, 5];
+// console.log(reduceArray(numbers, sum, 10));
+
+// const arr = [1, 3, 5, 7];
+
+// const result = arr
+//   .filter(x => x % 2 !== 0)
+//   .map(x => x * x)
+//   .slice(1, 3)
+//   .reduce((acc, cur) => acc - cur);
+
+// console.log(result);
+
+// let str = "Frontend";
+
+// let output = str
+//   .split('')
+//   .filter((_, i) => i % 2 === 0)
+//   .join('')
+//   .toLowerCase()
+//   .slice(1);
+
+// console.log(output);
+
+// let str = "ReactJS";
+
+// let output = str
+//   .split('')
+//   .reverse()
+//   .map((char, i) => i + char)
+//   .join('')
+//   .slice(0, 6);
+
+// console.log(output);
+
+// const arr = ["a", "b", "c", "d"];
+
+// const result = arr
+//   .map((char, i) => char + i)
+//   .filter(str => str.includes("1") || str.includes("3"))
+//   .join('')
+//   .toUpperCase();
+
+// console.log(result);
+
+//CLOSURE: a function defined inside another function with access to the variables of the outer function (lexical environment).
+// A closure can be accessed even when the outer function has finished execution.
+// Encapsulation
+// All closures of a function share the same value of lexical variables
+
+// function counter() {
+//   let count = 0; // Private variable
+
+//   return function () {
+//     count++;
+//     console.log(count);
+//   };
+// }
+
+// const increment = counter();
+// increment(); //1
+// increment(); //2
+
+// function outerFunction() {
+//     let outerVariable = "I am from outer function";
+
+//     function innerFunction() {
+//         console.log(outerVariable);
+//     }
+//     return innerFunction;
+// }
+
+// const myClosure = outerFunction();
+// myClosure();
+
+// function counter() {
+//     let count = 0;
+//     return {
+//         increment: function () {
+//             count++;
+//             console.log(count);
+//         },
+//         decrement: function () {
+//             count--;
+//             console.log(count);
+//         }
+//     };
+// }
+
+// const myCounter = counter();
+// myCounter.increment(); //1
+// myCounter.increment(); //2
+// myCounter.decrement(); //1
+// console.log(myCounter.count); //undefined
+
+// function createMultiplier(multiplier) {
+//     return function (value) {
+//         return value * multiplier;
+//     };
+// }
+
+// const double = createMultiplier(2);
+// const triple = createMultiplier(3);
+
+// console.log(double(5));
+// console.log(triple(5));
+
+//MEMOIZATION
+
+// function once(fn) {
+//   let executed = false;
+
+//   return function (...args) {
+//     if (!executed) {
+//       executed = true;
+//       return fn(...args);
+//     }
+//     console.log("Function already executed.");
+//   };
+// }
+
+// const start = once(() => console.log("Started!"));
+// start();
+// start();
+
+
+
+//ASSIGNMENT: Object.fromEntries, Object.defineProperty
+// getElementById, querySelector, querySelectorAll, classList: add, remove, toggle, append, appendChild, innerText
