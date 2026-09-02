@@ -1,0 +1,269 @@
+@media screen and (max-width: 1105px) {
+  .image img {
+    width: 150px;
+    height: 150px;
+  }
+  #images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .list ul {
+    display: flex;
+    gap: 30px;
+  }
+  /* .cartProduct {
+    width: 90%;
+  }
+  .cartContainer {
+    width: 100%;
+    height: 400px;
+  }
+  #cartHead {
+    font-size: 22px;
+  }
+  #cartPrice {
+    font-size: 20px;
+  }
+  #cartDescription {
+    font-size: 16px;
+  } */
+}
+@media screen and (max-width: 810px) {
+  .image img {
+    width: 120px;
+    height: 120px;
+  }
+  .list ul {
+    display: flex;
+    gap: 20px;
+  }
+  .list ul li a {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .price {
+    font-size: 14px;
+  }
+  .image button {
+    font-size: 10px;
+    width: calc(100% - 45%);
+  }
+  #container {
+    padding: 30px;
+  }
+  header {
+    padding: 20px 30px;
+  }
+  #cartHead {
+    font-size: 20px;
+  }
+  #cartPrice {
+    font-size: 18px;
+  }
+  .cartContainer {
+    width: calc(100% - 60%);
+  }
+  .orderPlaced {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .list ul {
+    gap: 15px;
+  }
+  #singleImage {
+    width: 200px;
+    height: 200px;
+  }
+  #head {
+    font-size: 20px;
+  }
+  #singleprice {
+    font-size: 20px;
+  }
+  #description {
+    font-size: 14px;
+  }
+  #category {
+    font-size: 16px;
+  }
+  #rating {
+    font-size: 14px;
+  }
+  .list {
+    display: none;
+  }
+  .icon {
+    display: block;
+    border: none;
+    color: white;
+    background-color: blueviolet;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .newList {
+    display: block;
+    position: absolute;
+    top: 0%;
+    right: 0;
+    background-color: blueviolet;
+    width: 200px;
+    padding: 20px;
+    z-index: 2;
+  }
+  .newList ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .newList ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .dropdownMain:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    top: -10px;
+    left: -105%;
+  }
+  .closeIcon {
+    display: block;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 10px;
+  }
+  .price {
+    font-size: 10px;
+  }
+  .image button {
+    font-size: 10px;
+    width: calc(100% - 30%);
+  }
+  .totalProducts {
+    width: calc(100% - 60%);
+  }
+}
+@media screen and (max-width: 660px) {
+  .cartProduct {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    padding: 30px 20px;
+    justify-content: center;
+  }
+  .cartContainer {
+    width: calc(100% - 50%);
+    height: 100px;
+  }
+  .cartWrapper {
+    gap: 20px;
+  }
+  #cartHead {
+    font-size: 16px;
+  }
+  .totalProducts {
+    width: calc(100% - 60%);
+  }
+  .orderPlaced {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 580px) {
+  #images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #head {
+    font-size: 14px;
+  }
+  #singleprice {
+    font-size: 14px;
+  }
+  #description {
+    font-size: 12px;
+  }
+  #category {
+    font-size: 12px;
+  }
+  #rating {
+    font-size: 12px;
+  }
+  #singleImage {
+    height: 140px;
+    width: 140px;
+  }
+  .wrapper button {
+    width: calc(100% - 30%);
+  }
+  .product {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+  }
+  .cartContainer {
+    height: 80px;
+  }
+  #cartHead {
+    font-size: 16px;
+  }
+  #cartPrice {
+    font-size: 16px;
+  }
+  .mainCart {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .totalProducts {
+    width: calc(100% - 20%);
+  }
+  .mainCart {
+    flex-direction: column;
+    align-items: center;
+    margin: 14% 0;
+  }
+  .cartProduct {
+    width: 100%;
+    padding: 10px;
+  }
+  .cartContainer {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 390px) {
+  #container {
+    padding: 10px;
+  }
+  header {
+    padding: 20px 10px;
+  }
+  .image img {
+    width: 60px;
+    height: 60px;
+  }
+  .image button {
+    font-size: 10px;
+    width: calc(100% - 10%);
+  }
+  .product {
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+  }
+  .wrapper button {
+    width: calc(100% - 30%);
+  }
+  .orderPlaced {
+    width: 90%;
+  }
+}
