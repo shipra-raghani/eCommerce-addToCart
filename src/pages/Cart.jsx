@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { useOutletContext, Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import QuantityControl from "../components/QuantityControl";
+import {  useCart } from "../Context/CartContext";
 
 function Cart() {
-  const { cart, setCart } = useOutletContext();
+  const { cart, setCart } = useCart();
   const [orderPlaced, setOrderPlaced] = useState(false);
   console.log("showCart", cart);
 

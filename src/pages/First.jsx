@@ -4,11 +4,10 @@ import HeaderFile from "../components/Header";
 import { useState } from "react";
 
 function First() {
-  const [cart, setCart] = useState([]);
   return (
     <>
-      <HeaderFile cart={cart} />
-      <Outlet context={{ cart, setCart }} />
+      <HeaderFile/>
+      <Outlet />
       <Footer />
     </>
   );

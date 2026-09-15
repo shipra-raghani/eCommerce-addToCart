@@ -9,6 +9,8 @@ import SingleProduct from "./pages/SingleProduct";
 import NotFound from "./pages/NotFound";
 import First from "./pages/First";
 import Cart from "./pages/Cart";
+import {CartContext} from "./Context/CartContext";
+
 let router = createBrowserRouter([
   {
     path: "/",
@@ -52,13 +54,9 @@ let router = createBrowserRouter([
 function App() {
   return (
     <>
+    <CartContext>
       <RouterProvider router={router}></RouterProvider>
-
-      {/* <div className="main">
-        <HeaderFile />
-        {id ? <SingleProduct /> : <Products />}
-        <Footer />
-      </div> */}
+      </CartContext>
     </>
   );
 }

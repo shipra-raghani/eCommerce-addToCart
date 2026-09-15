@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../Context/CartContext";
 
-function HeaderFile({ cart }) {
+function HeaderFile() {
+  const { cart } = useCart();
   const [showMenu, setShowMenu] = useState(false);
   function handleMenu() {
     setShowMenu(true);

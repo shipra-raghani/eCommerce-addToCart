@@ -1,10 +1,13 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import QuantityControl from "../components/QuantityControl";
+import { useCart } from "../Context/CartContext";
+import api from "../api/axios";
 // State changes in batches
 function SingleProduct() {
+  const { cart, cartValue } = useCart();
   const [product, setProduct] = useState(null);
-  const url = "https://fakestoreapi.com/products";
   const { id } = useParams();
   console.log("id:", id);
   useEffect(() => {
@@ -16,13 +19,13 @@ function SingleProduct() {
         setProduct(false);
         return;
       }
+      const data = await api.get("/products/" + id);
 
-      const response = await fetch(url + "/" + id);
+      console.log("====================================");
+      console.log(data.data);
+      console.log("====================================");
 
-      const result = await response.json();
-      console.log(result);
-
-      setProduct(result);
+      setProduct(data.data);
     }
     getSingleProduct();
   }, []);
@@ -51,7 +54,13 @@ function SingleProduct() {
           <p id="description">{product.description}</p>
           <h3 id="category">{product.category}</h3>
           <h3 id="rating">⭐ {product.rating.rate}</h3>
-          <button className="addToCart">Add to Cart</button>
+          {cart.some((item) => item.id === product.id) ? (
+            <QuantityControl product={product} />
+          ) : (
+            <button className="addToCart" onClick={() => cartValue(product)}>
+              Add To Cart
+            </button>
+          )}{" "}
         </div>
       </div>
     </>
