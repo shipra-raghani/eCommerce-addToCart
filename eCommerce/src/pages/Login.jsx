@@ -11,8 +11,8 @@ function Login() {
     e.preventDefault();
 
     const data = {
-      // firstname: firstname,
-      // lastname: lastname,
+      firstname: firstname,
+      lastname: lastname,
       email: email,
       password: password,
       role: "user",
