@@ -11,14 +11,14 @@ function Login() {
     e.preventDefault();
 
     const data = {
-      firstname: firstname,
-      lastname: lastname,
+      // firstname: firstname,
+      // lastname: lastname,
       email: email,
       password: password,
       role: "user",
     };
 
-    const result = await instance.post("user/login", data);
+    const result = await instance.post("/user/login", data);
     console.log(result.data);
   }
 
