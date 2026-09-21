@@ -18,7 +18,7 @@ function Login() {
       role: "user",
     };
 
-    const result = await instance.post("/api/user/login", data);
+    const result = await instance.post("user/login", data);
     console.log(result.data);
   }
 
