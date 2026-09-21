@@ -197,3 +197,61 @@ footer {
   align-items: center;
   height: 300px;
 }
+
+/* Login form */
+.login {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.login h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.login form {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.login input:focus {
+  border-color: #555;
+}
+
+.login button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: blueviolet;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.login button:hover {
+  background-color: #555;
+}
