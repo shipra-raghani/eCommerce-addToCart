@@ -255,3 +255,8 @@ footer {
 .login button:hover {
   background-color: #555;
 }
+#search {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}

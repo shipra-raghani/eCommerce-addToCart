@@ -1,25 +1,31 @@
 import { useState } from "react";
 import instance from "../axios";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   async function handleLogin(e) {
     e.preventDefault();
+    try {
+      const data = {
+        email: email,
+        password: password,
+        role: "user",
+      };
 
-    const data = {
-      firstname: firstname,
-      lastname: lastname,
-      email: email,
-      password: password,
-      role: "user",
-    };
-
-    const result = await instance.post("/user/login", data);
-    console.log(result.data);
+      const result = await instance.post("/user/login", data);
+      console.log(result);
+      if (result.status === 200) {
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Invalid Credentials");
+    }
   }
 
   return (
@@ -27,20 +33,6 @@ function Login() {
       <h1>Login</h1>
 
       <form onSubmit={handleLogin}>
-        <input
-          type="text"
-          placeholder="First Name"
-          value={firstname}
-          onChange={(e) => setFirstname(e.target.value)}
-        />
-
-        <input
-          type="text"
-          placeholder="Last Name"
-          value={lastname}
-          onChange={(e) => setLastname(e.target.value)}
-        />
-
         <input
           type="email"
           placeholder="Email"
@@ -56,6 +48,10 @@ function Login() {
         />
 
         <button type="submit">Login</button>
+        <div className="register">
+          <p>Don't have any account?</p>
+          <Link to="/register">Register</Link>
+        </div>
       </form>
     </div>
   );
