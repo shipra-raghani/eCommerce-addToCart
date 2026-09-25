@@ -259,4 +259,14 @@ footer {
   padding: 10px;
   border: none;
   border-radius: 10px;
+  text-align: center;
+  /* width: 100%; */
+  background-color: #dad7d7;
+  color: black;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
 }

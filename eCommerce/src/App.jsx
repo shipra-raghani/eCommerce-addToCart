@@ -1,5 +1,4 @@
 import "./style.css";
-import ProductProvider from "./contexts/ProductProvider";
 import First from "./pages/First";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -34,9 +33,7 @@ function App() {
   return (
     <div>
       <CartContext>
-        <ProductProvider>
-          <RouterProvider router={routes}></RouterProvider>
-        </ProductProvider>
+        <RouterProvider router={routes}></RouterProvider>
       </CartContext>
     </div>
   );

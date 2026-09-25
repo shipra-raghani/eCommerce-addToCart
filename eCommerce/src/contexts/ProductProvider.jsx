@@ -22,7 +22,7 @@ function ProductProvider({ children }) {
       setProducts(null);
     }
   }
-
+  
   return (
     <>
       <productContext.Provider value={{ products, setProducts, loading }}>
